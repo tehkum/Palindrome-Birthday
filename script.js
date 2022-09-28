@@ -4,6 +4,7 @@ var outputPal = document.querySelector("#output-pal");
 
 function checkPalindromeOrNot(){
     // var dob = dateConversion(inputDob.value);
+    if(inputDob.value.trim() != 0){
     var dob = inputDob.value.split("-");
     
     var yyyy = dob[0];
@@ -20,6 +21,9 @@ function checkPalindromeOrNot(){
     }else {
         outputPal.innerText = "year is not palindrome";
     }
+}else{
+    outputPal.innerText = "enter a date"
+}
 }
 
 function formatOfDate(yyyy,mm,dd){
